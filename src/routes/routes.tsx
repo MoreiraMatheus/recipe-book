@@ -1,6 +1,6 @@
 import { Routes, Route } from 'react-router-dom';
 
-import { Home } from '../pages/Home';
+import { Home } from '../pages/Home/Home';
 import { Discovery } from '../pages/Discovery';
 
 export function MainRoutes(){
