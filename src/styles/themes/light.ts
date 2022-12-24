@@ -1,4 +1,8 @@
 export const lightTheme = {
-  title: 'light',
+  TITLE: 'light',
   
+  TEXT:{},
+  BACKGROUND:{
+    HEADER:'#22c55e'
+  },
 }
