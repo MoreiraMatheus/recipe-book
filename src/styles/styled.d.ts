@@ -13,5 +13,9 @@ declare module 'styled-components' {
 				BUTTON: string;
 			};
 		};
+		FONTS: {
+			TITLE: string;
+			TEXT: string;
+		};
 	}
 }

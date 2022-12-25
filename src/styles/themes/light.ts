@@ -10,4 +10,8 @@ export const lightTheme = {
 			BUTTON: '#22c55e',
 		},
 	},
+	FONTS: {
+		TITLE: "'Lobster', cursive",
+		TEXT: "'Barlow Semi Condensed', sans-serif" /* 400 600 800 */,
+	},
 };

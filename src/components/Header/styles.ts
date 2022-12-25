@@ -10,6 +10,11 @@ export const Container = styled.nav`
   padding: 0 32px;
   position: fixed;
 
+  h1{
+    font-family: ${({theme})=>theme.FONTS.TITLE};
+    font-size: 2em;
+  }
+
   ul{
     display: inherit;
     list-style-type: none;
