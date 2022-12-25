@@ -4,6 +4,9 @@ export const lightTheme = {
 	COLORS: {
 		TEXT: {
 			DEFAULT: '#171717',
+			PRIMARYTEXT: '#22c55e',
+			SECONDARYTEXT: '#FAFAFA',
+			PRIMARYTITLE: '#15803d',
 		},
 		BACKGROUND: {
 			HEADER: '#22c55e',

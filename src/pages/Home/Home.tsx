@@ -8,7 +8,7 @@ export function Home(){
 
       <ImageContainer>
         <img src={burgerImage} alt="" />
-        <a href='https://storyset.com/food'>Food illustrations by Storyset</a>
+        <a href='https://storyset.com/food' target='_blank'>Food illustrations by Storyset</a>
       </ImageContainer>
 
       <TextContainer>
