@@ -14,6 +14,10 @@ declare module 'styled-components' {
 			BACKGROUND: {
 				HEADER: string;
 				BUTTON: string;
+				USERBUTTON: string;
+			};
+			OTHERS: {
+				USERICON: string;
 			};
 		};
 		FONTS: {

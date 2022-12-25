@@ -25,6 +25,7 @@ export const ImageContainer = styled.div`
     text-decoration: none;
     color: ${({theme})=>theme.COLORS.TEXT.DEFAULT};
     margin-top: -5%;
+    outline: none;
   }
   a:hover{
     text-decoration: underline;

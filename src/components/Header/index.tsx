@@ -1,15 +1,32 @@
-import { Container } from "./styles"
+import { Container } from './styles';
+import { Hamburger } from 'phosphor-react';
+import { useTheme } from 'styled-components';
 
-export function Header(){
-  return(
-    <Container>
-      <h1>Recipe-book</h1>
-      <ul>
-        <li>Home</li>
-        <li>Descubra mais</li>
-        <li>Minhas receitas</li>
-      </ul>
-      <div>imagem do usuário aqui</div>
-    </Container>
-  )
+import { User } from 'phosphor-react';
+
+export function Header() {
+	const theme = useTheme();
+	return (
+		<Container>
+			<h1>
+				Recipe-book
+				<Hamburger
+					weight='fill'
+					color={theme.COLORS.TEXT.PRIMARYTITLE}
+				/>
+			</h1>
+			<ul>
+				<li>Home</li>
+				<li>Descubra mais</li>
+				<li>Minhas receitas</li>
+			</ul>
+			<div>
+				<User
+					weight='bold'
+					color={theme.COLORS.OTHERS.USERICON}
+					size={'100%'}
+				/>
+			</div>
+		</Container>
+	);
 }

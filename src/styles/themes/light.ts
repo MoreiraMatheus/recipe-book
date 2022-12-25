@@ -11,6 +11,10 @@ export const lightTheme = {
 		BACKGROUND: {
 			HEADER: '#22c55e',
 			BUTTON: '#22c55e',
+			USERBUTTON: '#15803d',
+		},
+		OTHERS: {
+			USERICON: '#22c55e',
 		},
 	},
 	FONTS: {

@@ -13,6 +13,10 @@ export const Container = styled.nav`
   h1{
     font-family: ${({theme})=>theme.FONTS.TITLE};
     font-size: 2em;
+    color: ${({theme})=>theme.COLORS.TEXT.PRIMARYTITLE};
+    display: flex;
+    align-items: center;
+    cursor: pointer;
   }
 
   ul{
@@ -20,7 +24,24 @@ export const Container = styled.nav`
     list-style-type: none;
 
     li{
-      margin: 0 8px;
+      margin: 0 32px;
+      color: ${({theme})=>theme.COLORS.TEXT.SECONDARYTEXT};
+      font-weight: 600;
+      font-size: 1.5em;
+      transition: all 1s linear;
+      cursor: pointer;
     }
+    li:hover{
+      text-decoration: underline;
+    }
+  }
+
+  div{
+    background-color: ${({theme})=>theme.COLORS.BACKGROUND.USERBUTTON};
+    padding: 8px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
   }
 `
