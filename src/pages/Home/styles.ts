@@ -1,4 +1,24 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const textAppears = keyframes`
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+`
+
+const imageAppears = keyframes`
+  0%{
+    transform: scale(.1, .1) ;
+    opacity: 0;
+  }
+  100%{
+    transform: scale(1, 1) ;
+    opacity: 1;
+  }
+`
 
 export const Container = styled.main`
   display: flex;
@@ -13,12 +33,11 @@ export const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* background-color: yellow; */
 
   img{
     width: 450px;
     height: 378.28px;
-    /* background-color: blue; */
+    animation: .8s ${imageAppears} ease-out;
   }
 
   a{
@@ -26,6 +45,7 @@ export const ImageContainer = styled.div`
     color: ${({theme})=>theme.COLORS.TEXT.DEFAULT};
     margin-top: -5%;
     outline: none;
+    animation: 1s ${textAppears} linear;
   }
   a:hover{
     text-decoration: underline;
@@ -40,12 +60,14 @@ export const TextContainer = styled.div`
     font-family: ${({theme})=>theme.FONTS.TITLE};
     font-size: 3em;
     color: ${({theme})=>theme.COLORS.TEXT.PRIMARYTITLE};
+    animation: 1s ${textAppears} linear;
   }
   
   p{
     font-weight: 600;
     font-size: 2em;
     color: ${({theme})=>theme.COLORS.TEXT.PRIMARYTEXT};
+    animation: 1s ${textAppears} linear;
   }
 
   button{
@@ -56,8 +78,12 @@ export const TextContainer = styled.div`
     width: 250px;
     height: 50px;
     margin: 16px 0;
+    cursor: pointer;
     font-size: 20px;
     font-weight: 800;
-    cursor: pointer;
+  }
+  button:hover{
+    transition: background-color .4s;
+    background-color: ${({theme})=>theme.COLORS.BACKGROUND.USERBUTTON};
   }
 `
