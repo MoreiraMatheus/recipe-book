@@ -8,10 +8,6 @@ export function Discovery() {
     <h1>Discovery</h1>
     <section>
       <RecipeCard></RecipeCard>
-      <RecipeCard></RecipeCard>
-      <RecipeCard></RecipeCard>
-      <RecipeCard></RecipeCard>
-      <RecipeCard></RecipeCard>
     </section>
   </Container>
   )

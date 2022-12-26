@@ -16,7 +16,6 @@ export const Container = styled.main`
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    /* margin-top: 32px; */
     padding: 32px 0;
     max-width: 918px;
   }
