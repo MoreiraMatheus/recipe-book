@@ -12,6 +12,7 @@ export const lightTheme = {
 			HEADER: '#22c55e',
 			BUTTON: '#22c55e',
 			USERBUTTON: '#15803d',
+			RECIPECARD: '#e5e5e5',
 		},
 		OTHERS: {
 			USERICON: '#22c55e',

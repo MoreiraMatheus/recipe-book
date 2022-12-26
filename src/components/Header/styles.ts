@@ -9,6 +9,7 @@ export const Container = styled.nav`
   width: 100%;
   padding: 0 32px;
   position: fixed;
+  top: 0;
 
   h1{
     font-family: ${({theme})=>theme.FONTS.TITLE};

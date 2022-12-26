@@ -15,6 +15,7 @@ declare module 'styled-components' {
 				HEADER: string;
 				BUTTON: string;
 				USERBUTTON: string;
+				RECIPECARD: string;
 			};
 			OTHERS: {
 				USERICON: string;

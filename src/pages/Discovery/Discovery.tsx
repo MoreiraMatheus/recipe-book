@@ -1,9 +1,18 @@
-import { Container } from "./styles"
+import { Container } from './styles';
 
-export function Discovery(){
-  return(
-    <Container>
-      <h1>Discovery</h1>
-    </Container>
+import { RecipeCard } from '../../components/RecipeCard';
+
+export function Discovery() {
+	return (
+  <Container>
+    <h1>Discovery</h1>
+    <section>
+      <RecipeCard></RecipeCard>
+      <RecipeCard></RecipeCard>
+      <RecipeCard></RecipeCard>
+      <RecipeCard></RecipeCard>
+      <RecipeCard></RecipeCard>
+    </section>
+  </Container>
   )
 }
