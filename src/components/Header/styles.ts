@@ -19,20 +19,30 @@ export const Container = styled.nav`
     cursor: pointer;
   }
 
-  ul{
-    display: inherit;
-    list-style-type: none;
-
-    li{
+  nav{
+    display: flex;
+    a{
       margin: 0 32px;
-      color: ${({theme})=>theme.COLORS.TEXT.SECONDARYTEXT};
-      font-weight: 600;
       font-size: 1.5em;
-      transition: all 1s linear;
-      cursor: pointer;
+      font-weight: 600;
+      color: ${({theme})=>theme.COLORS.TEXT.SECONDARYTEXT};
+      text-decoration: none;
+      position: relative;
     }
-    li:hover{
-      text-decoration: underline;
+    a::before{
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background-color: ${({theme})=>theme.COLORS.TEXT.SECONDARYTEXT};
+      transition: width .3s ease-out;
+    }
+    a:hover::before{
+      width: 100%;
+      left: 0;
+      right: auto;
     }
   }
 

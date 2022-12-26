@@ -1,7 +1,7 @@
 import { Routes, Route } from 'react-router-dom';
 
 import { Home } from '../pages/Home/Home';
-import { Discovery } from '../pages/Discovery';
+import { Discovery } from '../pages/Discovery/Discovery';
 
 export function MainRoutes(){
   return(
