@@ -1,27 +1,48 @@
-import { Container, RecipeInfo } from './styles';
+import { Card, FrontCard, BackCard, MainInformations, StarWrapper } from './styles';
 
 import { Star } from 'phosphor-react';
 
-export function RecipeCard() {
+interface RecipeCardProps {
+	imageLink: string;
+	recipeName: string;
+	chefName: string;
+	stars: number;
+	// passar o publishedDate para UTC
+	publishedDate: string;
+}
+
+export function RecipeCard({
+	imageLink,
+	recipeName,
+	chefName,
+	stars,
+	publishedDate,
+}: RecipeCardProps) {
 	return (
-		<Container image='https://comidinhasdochef.com/wp-content/uploads/2018/11/torta-de-frango-de-liquidificador.jpg'>
-      {/* Ver a possibilidade de usar img aqui no lugar de section */}
-			<section></section>
-			<RecipeInfo>
-				<h1>Torta de frango</h1>
-				<span>
-					chefe:<mark>Fulano</mark>
-				</span>
-				<span>
-					<Star
-						color='yellow'
-						weight='fill'
-					/>
-					<span>0</span>
-				</span>
-        <span>publicado em:</span>
-        
-			</RecipeInfo>
-		</Container>
+		<Card>
+			<FrontCard>
+				<img
+					src={imageLink}
+					alt={recipeName}
+				/>
+				<div>
+					<MainInformations>
+						<h1>{recipeName}</h1>
+						<span>
+							chefe: <mark>{chefName}</mark>
+						</span>
+					</MainInformations>
+					<StarWrapper>
+						<Star
+							color='yellow'
+							weight='fill'
+						/>
+						<span>{stars}</span>
+					</StarWrapper>
+					<span>publicado em: {publishedDate}</span>
+				</div>
+			</FrontCard>
+			<BackCard>back</BackCard>
+		</Card>
 	);
 }
