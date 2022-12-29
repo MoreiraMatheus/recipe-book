@@ -1,7 +1,17 @@
 import { Container, MainInformations, StarWrapper } from './styles';
 
-import { FlipCardProps } from '../FlipCard';
 import { Star } from 'phosphor-react';
+
+interface RecipeCardProps{
+  imageLink: string;
+	recipeName: string;
+	chefName: string;
+	stars: number;
+	publishedDate: string;
+  // trocar o nome desses parâmetros para o inglês
+  preparo: number
+  porc: number
+}
 
 export function RecipeCard({
 	imageLink,
@@ -9,14 +19,16 @@ export function RecipeCard({
 	chefName,
 	stars,
 	publishedDate,
-}: FlipCardProps) {
+  preparo,
+  porc,
+}: RecipeCardProps) {
 	return (
 		<Container>
 			<img
 				src={imageLink}
 				alt={recipeName}
 			/>
-			<div className='Wrapper'>
+			<div id='MainWrapper'>
 				<MainInformations>
 					<h1>{recipeName}</h1>
 					<span>
@@ -32,8 +44,10 @@ export function RecipeCard({
 				</StarWrapper>
 				<span>publicado em: {publishedDate}</span>
 			</div>
-      <div className='MoreInfo'>
-        <p>teste</p>
+      <div id='BackInfo'>
+        <span>Tempo de preparo: <mark>{preparo}min</mark> </span>
+        <span>Porções: <mark>{porc}</mark> </span>
+        <button>Ver Receita</button>
       </div>
 		</Container>
 	);
