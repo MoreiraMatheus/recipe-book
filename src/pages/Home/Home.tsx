@@ -1,6 +1,8 @@
 import burgerImage from '../../assets/Hamburger-bro.svg';
 
-import { Container, ImageContainer, TextContainer } from './styles';
+import { Container, TextContainer } from './styles';
+import { StorysetImage } from '../../components/StorysetImage';
+
 import { useTheme } from 'styled-components';
 
 import { Hamburger } from 'phosphor-react';
@@ -12,18 +14,11 @@ export function Home() {
 	const navigate = useNavigate()
 	return (
 		<Container>
-			<ImageContainer>
-				<img
-					src={burgerImage}
-					alt=''
-				/>
-				<a
-					href='https://storyset.com/food'
-					target='_blank'
-				>
-					Food illustrations by Storyset
-				</a>
-			</ImageContainer>
+			<StorysetImage
+				image={burgerImage}
+				link='https://storyset.com/food'
+				message='Food illustrations by Storyset'
+			/>
 
 			<TextContainer>
 				<h1>
