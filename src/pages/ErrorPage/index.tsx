@@ -12,7 +12,7 @@ export function ErrorPage(){
       <StorysetImage
         image={NotFoundImage}
         link="https://storyset.com/not%20found"
-        message="Not Found Illustrations by Storyset"
+        message="Not Found illustrations by Storyset"
       />
     </Container>
   )
