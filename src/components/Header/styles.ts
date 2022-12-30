@@ -9,6 +9,7 @@ export const Container = styled.nav`
   width: 100%;
   padding: 0 32px;
   position: fixed;
+  z-index: 1;
   top: 0;
 
   h1{

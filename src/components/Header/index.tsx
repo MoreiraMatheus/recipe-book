@@ -20,9 +20,9 @@ export function Header() {
 			<nav>
 				<Link to={'/'}>Home</Link>
 				<Link to={'/discovery'}>Descubra mais</Link>
-				<Link to={'/discovery'}>Minhas receitas</Link>
+				<Link to={'*'}>Minhas receitas</Link>
 			</nav>
-			<div>
+			<div onClick={()=>{navigate('/login')}}>
 				<User
 					weight='bold'
 					color={theme.COLORS.OTHERS.USERICON}

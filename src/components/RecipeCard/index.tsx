@@ -8,9 +8,8 @@ interface RecipeCardProps{
 	chefName: string;
 	stars: number;
 	publishedDate: string;
-  // trocar o nome desses parâmetros para o inglês
-  preparo: number
-  porc: number
+  preparationTime: number
+  servings: number
 }
 
 export function RecipeCard({
@@ -19,8 +18,8 @@ export function RecipeCard({
 	chefName,
 	stars,
 	publishedDate,
-  preparo,
-  porc,
+  preparationTime,
+  servings,
 }: RecipeCardProps) {
 	return (
 		<Container>
@@ -45,8 +44,8 @@ export function RecipeCard({
 				<span>publicado em: {publishedDate}</span>
 			</div>
       <div id='BackInfo'>
-        <span>Tempo de preparo: <mark>{preparo}min</mark> </span>
-        <span>Porções: <mark>{porc}</mark> </span>
+        <span>Tempo de preparo: <mark>{preparationTime}min</mark> </span>
+        <span>Porções: <mark>{servings}</mark> </span>
         <button>Ver Receita</button>
       </div>
 		</Container>
