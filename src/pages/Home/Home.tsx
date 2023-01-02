@@ -2,6 +2,7 @@ import burgerImage from '../../assets/Hamburger-bro.svg';
 
 import { Container, TextContainer } from './styles';
 import { StorysetImage } from '../../components/StorysetImage';
+import { Button } from '../../components/Button/styles';
 
 import { useTheme } from 'styled-components';
 
@@ -11,7 +12,7 @@ import { useNavigate } from 'react-router-dom';
 
 export function Home() {
 	const theme = useTheme();
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 	return (
 		<Container>
 			<StorysetImage
@@ -29,7 +30,17 @@ export function Home() {
 					/>
 				</h1>
 				<p>Todas as suas receitas em um só lugar</p>
-				<button onClick={()=>{navigate('/discovery')}}>Explorar</button>
+				<Button
+					onClick={() => {
+						navigate('/discovery');
+					}}
+					width='250px'
+					height='40px'
+					hoverAnimation
+				>
+					Explorar
+				</Button>
+				{/* <button onClick={()=>{navigate('/discovery')}}>Explorar</button> */}
 			</TextContainer>
 		</Container>
 	);

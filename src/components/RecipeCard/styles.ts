@@ -67,21 +67,6 @@ export const Container = styled.div`
 			font-weight: 600;
 			margin: 16px 0;
 		}
-
-		button {
-			background-color: ${({ theme }) => theme.COLORS.BACKGROUND.BUTTON};
-			color: ${({ theme }) => theme.COLORS.TEXT.SECONDARYTEXT};
-			border: none;
-			border-radius: 16px;
-			width: 60%;
-			height: 13%;
-			margin: 16px 0;
-			cursor: pointer;
-			font-size: 20px;
-			font-weight: 800;
-			position: absolute;
-			bottom: 8px;
-		}
 	}
 `;
 

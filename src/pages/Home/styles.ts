@@ -35,21 +35,4 @@ export const TextContainer = styled.div`
     color: ${({theme})=>theme.COLORS.TEXT.PRIMARYTEXT};
     animation: 1s ${textAppears} linear;
   }
-
-  button{
-    background-color: ${({theme})=>theme.COLORS.BACKGROUND.BUTTON};
-    color: ${({theme})=>theme.COLORS.TEXT.SECONDARYTEXT};
-    border: none;
-    border-radius: 16px;
-    width: 250px;
-    height: 50px;
-    margin: 16px 0;
-    cursor: pointer;
-    font-size: 20px;
-    font-weight: 800;
-  }
-  button:hover{
-    transition: background-color .4s;
-    background-color: ${({theme})=>theme.COLORS.BACKGROUND.USERBUTTON};
-  }
 `

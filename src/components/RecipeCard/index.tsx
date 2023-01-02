@@ -2,14 +2,16 @@ import { Container, MainInformations, StarWrapper } from './styles';
 
 import { Star } from 'phosphor-react';
 
-interface RecipeCardProps{
-  imageLink: string;
+import { Button } from '../Button/styles';
+
+interface RecipeCardProps {
+	imageLink: string;
 	recipeName: string;
 	chefName: string;
 	stars: number;
 	publishedDate: string;
-  preparationTime: number
-  servings: number
+	preparationTime: number;
+	servings: number;
 }
 
 export function RecipeCard({
@@ -18,8 +20,8 @@ export function RecipeCard({
 	chefName,
 	stars,
 	publishedDate,
-  preparationTime,
-  servings,
+	preparationTime,
+	servings,
 }: RecipeCardProps) {
 	return (
 		<Container>
@@ -43,11 +45,24 @@ export function RecipeCard({
 				</StarWrapper>
 				<span>publicado em: {publishedDate}</span>
 			</div>
-      <div id='BackInfo'>
-        <span>Tempo de preparo: <mark>{preparationTime}min</mark> </span>
-        <span>Porções: <mark>{servings}</mark> </span>
-        <button>Ver Receita</button>
-      </div>
+			<div id='BackInfo'>
+				<span>
+					Tempo de preparo: <mark>{preparationTime}min</mark>{' '}
+				</span>
+				<span>
+					Porções: <mark>{servings}</mark>{' '}
+				</span>
+				<Button
+					width='60%'
+					height='13%'
+					extraCSS='
+					position: absolute;
+					bottom: 8px'
+					hoverAnimation
+				>
+					Ver Receita
+				</Button>
+			</div>
 		</Container>
 	);
 }

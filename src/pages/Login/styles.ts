@@ -21,24 +21,13 @@ export const Container = styled.main`
       display: flex;
       flex-direction: column;
       border-radius: 8px;
-      /* align-items: center; */
       row-gap: 16px;
       background-color: ${({theme})=>theme.COLORS.BACKGROUND.FORM};
-
-      button{
-        background-color: ${({theme})=>theme.COLORS.BACKGROUND.BUTTON};
-        border: none;
-        height: 40px;
-      }
     }
   }
 `
 
-interface InputBoxProps{
-  onFocus?: boolean;
-}
-
-export const InputBox = styled.div<InputBoxProps>`
+export const InputBox = styled.div`
   position: relative;
 
   input{
@@ -62,7 +51,6 @@ export const InputBox = styled.div<InputBoxProps>`
   label{
     font-size: 1em;
     left: 0;
-    /* bottom: 20px; */
     top: 15px;
     position: absolute;
     width: 400px;
