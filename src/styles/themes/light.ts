@@ -13,6 +13,7 @@ export const lightTheme = {
 			BUTTON: '#22c55e',
 			USERBUTTON: '#15803d',
 			RECIPECARD: '#e5e5e5',
+			FORM: '#e5e5e5',
 		},
 		OTHERS: {
 			USERICON: '#22c55e',
