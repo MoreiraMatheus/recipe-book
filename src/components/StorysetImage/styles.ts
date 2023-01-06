@@ -28,7 +28,7 @@ export const Container = styled.div`
   img{
     width: 450px;
     height: 378.28px;
-    animation: .8s ${imageAppears} ease-out;
+    animation: .6s ${imageAppears} ease-out;
   }
 
   a{
@@ -36,7 +36,7 @@ export const Container = styled.div`
     color: ${({theme})=>theme.COLORS.TEXT.DEFAULT};
     margin-top: -5%;
     outline: none;
-    animation: 1s ${textAppears} linear;
+    animation: .6s ${textAppears} linear;
   }
   a:hover{
     text-decoration: underline;

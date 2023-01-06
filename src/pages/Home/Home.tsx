@@ -1,4 +1,4 @@
-import burgerImage from '../../assets/Hamburger-bro.svg';
+import burgerImage from '../../assets/StorySetImages/Hamburger-bro.svg';
 
 import { Container, TextContainer } from './styles';
 import { StorysetImage } from '../../components/StorysetImage';

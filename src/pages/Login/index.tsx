@@ -2,7 +2,7 @@ import { Container, InputBox } from './styles';
 import { Title } from '../../components/Title/styles';
 import { StorysetImage } from '../../components/StorysetImage';
 
-import LoginImage from '../../assets/Mobile-login.svg';
+import LoginImage from '../../assets/StorySetImages/Mobile-login.svg';
 
 import { Button } from '../../components/Button/styles';
 
@@ -15,11 +15,11 @@ export function Login() {
 					<InputBox>
 						<input
 							type='text'
-							name='name'
-							id='iname'
+							name='user'
+							id='iuser'
 							required
 						/>
-						<label htmlFor='iname'>Nome:</label>
+						<label htmlFor='iuser'>Usuário:</label>
 						<span></span>
 					</InputBox>
 

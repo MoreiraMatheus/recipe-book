@@ -3,7 +3,7 @@ import { Title } from '../../components/Title/styles'
 
 import { Container } from "./styles"
 
-import NotFoundImage from '../../assets/Page-not-Found.svg'
+import NotFoundImage from '../../assets/StorySetImages/Page-not-Found.svg'
 
 export function ErrorPage(){
   return(
