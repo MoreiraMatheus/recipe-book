@@ -10,13 +10,13 @@
   margin: 16px 0;
 '>
     <img src='src/assets/Previews/HomePreview.png' alt='preview projeto'style='
-      width: 300px
-    '/>
+      width: 500px
+    '/></br>
     <img src='src/assets/Previews/DiscoveryPreview.png' alt='preview projeto'style='
-      width: 300px
-    '/>
+      width: 500px
+    '/></br>
     <img src='src/assets/Previews/LoginPreview.png' alt='preview projeto'style='
-      width: 300px
+      width: 500px
     '/>
 
 </div>
