@@ -1,3 +1,5 @@
+import { useContext } from 'react';
+
 import { Container } from './styles';
 import { Hamburger } from 'phosphor-react';
 import { useTheme } from 'styled-components';
