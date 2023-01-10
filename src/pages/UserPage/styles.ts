@@ -24,13 +24,15 @@ export const Container = styled.main`
     align-items: center;
     justify-content: center;
     padding: 32px 8px;
-    max-width: 600px;
-    overflow-y: scroll;
+    /* max-width: 600px; */
   }
 
   div#userData{
     width: 30%;
-    height: 40px;
+    min-width: 300px;
+    height: 400px;
+    position: sticky;
+    top: 85px;
     background-color: ${({theme})=>theme.COLORS.BACKGROUND.HEADER};
   }
 `
