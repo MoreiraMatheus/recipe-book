@@ -26,6 +26,24 @@ export function Discovery() {
 					preparationTime={16}
 					servings={10}
 				/>
+				<RecipeCard
+					imageLink='https://comidinhasdochef.com/wp-content/uploads/2018/11/torta-de-frango-de-liquidificador.jpg'
+					recipeName='Torta de frango'
+					chefName='Matheus'
+					stars={2}
+					publishedDate='27/12/2022'
+					preparationTime={16}
+					servings={10}
+				/>
+				<RecipeCard
+					imageLink='https://comidinhasdochef.com/wp-content/uploads/2018/11/torta-de-frango-de-liquidificador.jpg'
+					recipeName='Torta de frango'
+					chefName='Matheus'
+					stars={2}
+					publishedDate='27/12/2022'
+					preparationTime={16}
+					servings={10}
+				/>
 			</section>
 		</Container>
 	);

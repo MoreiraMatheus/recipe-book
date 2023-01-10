@@ -22,7 +22,7 @@ export function Header() {
 			<nav>
 				<Link to={'/'}>Home</Link>
 				<Link to={'/discovery'}>Descubra mais</Link>
-				<Link to={'*'}>Minhas receitas</Link>
+				<Link to={'/user'}>Minhas receitas</Link>
 			</nav>
 			<div onClick={()=>{navigate('/login')}}>
 				<User
