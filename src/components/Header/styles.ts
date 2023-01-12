@@ -11,6 +11,7 @@ export const Container = styled.nav`
   position: fixed;
   z-index: 1;
   top: 0;
+  box-shadow: 0 1px 5px rgba(17, 17, 17, .6);
 
   h1{
     font-family: ${({theme})=>theme.FONTS.TITLE};

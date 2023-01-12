@@ -34,20 +34,27 @@ export const Container = styled.main`
     flex-direction: column;
     align-items: center;
     row-gap: 16px;
-    width: 250px;
-    min-width: 250px;
+    width: 200px;
+    min-width: 200px;
     height: 55vh;
     margin-top: -85px;
     padding-top: 16px;
-    background-color: ${({theme})=>theme.COLORS.BACKGROUND.HEADER};
+    background-color: ${({theme})=>theme.COLORS.BACKGROUND.USERDATATAPE};
+    
+    h1{
+      font-weight: 600;
+      font-size: 2em;
+    }
 
     div#triangle{
-      width: 177px;
-      height: 177px;
+      width: 141px;
+      height: 141px;
       background-color: #FAFAFA;
       position: absolute;
-      top: calc(55vh - 13vh - 3px);
+      top: calc(55vh - 10vh - 6px);
       transform: rotate(45deg);
+      border-top: 6px double ${({theme})=>theme.COLORS.BACKGROUND.USERDATATAPE};
+      border-left: 6px double ${({theme})=>theme.COLORS.BACKGROUND.USERDATATAPE};
     }
   }
 `

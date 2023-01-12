@@ -17,6 +17,7 @@ declare module 'styled-components' {
 				USERBUTTON: string;
 				RECIPECARD: string;
 				FORM: string;
+				USERDATATAPE: string;
 			};
 			OTHERS: {
 				USERICON: string;
