@@ -74,7 +74,9 @@ export function UserPage() {
 				</div>
 				<div id='userData'>
           <h1>Fulano de tal</h1>
-          <p></p>
+          <p>Receitas salvas</p>
+					<p>receitas publicadas</p>
+					<div id="triangle"></div>
         </div>
 			</section>
 		</Container>
