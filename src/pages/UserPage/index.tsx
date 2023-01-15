@@ -72,7 +72,7 @@ export function UserPage() {
 						servings={8}
 					/>
 				</div>
-				<div id='userData'>
+				<div id='userDataTape'>
           <h1>Fulano de tal</h1>
           <p>Receitas salvas</p>
 					<p>receitas publicadas</p>

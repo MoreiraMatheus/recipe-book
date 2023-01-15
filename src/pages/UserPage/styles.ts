@@ -1,4 +1,13 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
+
+const userDataTapeAppears = keyframes`
+  from{
+    transform: translate(0, -55vh);
+  }
+  to{
+    transform: translate(0, 0);
+  }
+`
 
 export const Container = styled.main`
   display: flex;
@@ -27,7 +36,8 @@ export const Container = styled.main`
     /* max-width: 600px; */
   }
 
-  div#userData{
+  div#userDataTape{
+    animation: 1s ease-in-out ${userDataTapeAppears};
     position: sticky;
     top: 85px;
     display: flex;
@@ -40,6 +50,8 @@ export const Container = styled.main`
     margin-top: -85px;
     padding-top: 16px;
     background-color: ${({theme})=>theme.COLORS.BACKGROUND.USERDATATAPE};
+    color: ${({theme})=>theme.COLORS.TEXT.SECONDARYTEXT};
+    border-radius: 0 0 3px 3px;
     
     h1{
       font-weight: 600;
