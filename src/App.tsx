@@ -8,13 +8,19 @@ import { ThemeProvider } from 'styled-components';
 import { lightTheme } from './styles/themes/light';
 import { GlobalStyle } from './styles/GlobalStyle';
 
+interface AppContextProps {
+	userName: string;
+	setUserName: any
+}
+
+export const AppContext = createContext<AppContextProps>({userName : '', setUserName: ''});
+
 function App() {
-	const [user, setUser] = useState(null);
-	const AppContext = createContext({ user, setUser });
+	const [userName, setUserName] = useState<string>('Fulano de tal');
 	return (
 		<ThemeProvider theme={lightTheme}>
 			<GlobalStyle />
-			<AppContext.Provider value={{ user, setUser }}>
+			<AppContext.Provider value={{ userName, setUserName }}>
 				<Router>
 					<Header />
 					<MainRoutes />

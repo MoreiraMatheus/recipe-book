@@ -61,7 +61,7 @@ export const Container = styled.main`
     div#triangle{
       width: 141px;
       height: 141px;
-      background-color: #FAFAFA;
+      background-color: white;
       position: absolute;
       top: calc(55vh - 10vh - 6px);
       transform: rotate(45deg);

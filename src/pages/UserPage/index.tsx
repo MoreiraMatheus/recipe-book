@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import { Container } from './styles';
 import { Title } from '../../components/Title/styles';
 import { RecipeCard } from '../../components/RecipeCard';
+import { AppContext } from '../../App';
 
 export function UserPage() {
+	const { userName } = useContext(AppContext)
+
 	return (
 		<Container>
 			<Title>Página de user</Title>
@@ -73,7 +77,7 @@ export function UserPage() {
 					/>
 				</div>
 				<div id='userDataTape'>
-          <h1>Fulano de tal</h1>
+          <h1>{userName}</h1>
           <p>Receitas salvas</p>
 					<p>receitas publicadas</p>
 					<div id="triangle"></div>
