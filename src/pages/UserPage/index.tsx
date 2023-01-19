@@ -1,8 +1,9 @@
 import { useContext } from 'react';
+import { AppContext } from '../../App';
+
 import { Container } from './styles';
 import { Title } from '../../components/Title/styles';
 import { RecipeCard } from '../../components/RecipeCard';
-import { AppContext } from '../../App';
 
 export function UserPage() {
 	const { userName } = useContext(AppContext)

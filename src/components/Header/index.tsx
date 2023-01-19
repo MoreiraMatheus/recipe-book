@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { AppContext } from '../../App';
 
 import { Container } from './styles';
 import { Hamburger } from 'phosphor-react';
@@ -8,6 +9,9 @@ import { User } from 'phosphor-react';
 import { Link, useNavigate } from 'react-router-dom';
 
 export function Header() {
+
+	const {userName} = useContext(AppContext)
+	
 	const theme = useTheme();
 	const navigate = useNavigate()
 	return (
@@ -22,9 +26,9 @@ export function Header() {
 			<nav>
 				<Link to={'/'}>Home</Link>
 				<Link to={'/discovery'}>Descubra mais</Link>
-				<Link to={'/user'}>Minhas receitas</Link>
+				<Link to={userName === '' ? '/login' : '/user'}>Minhas receitas</Link>
 			</nav>
-			<div onClick={()=>{navigate('/login')}}>
+			<div onClick={()=>{navigate(userName === '' ? '/login' : '/user')}}>
 				<User
 					weight='bold'
 					color={theme.COLORS.OTHERS.USERICON}
