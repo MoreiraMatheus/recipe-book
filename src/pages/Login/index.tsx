@@ -9,20 +9,24 @@ import LoginImage from '../../assets/StorySetImages/Mobile-login.svg';
 
 import { Button } from '../../components/Button/styles';
 
-export function Login() {
+import { useNavigate } from 'react-router-dom';
 
-	const {userName, setUserName} = useContext(AppContext)
+export function Login() {
+	const navigate = useNavigate()
+
+	const {setUserName} = useContext(AppContext)
 
 	const [user, setUser] = useState('')
 	const [password, setPassword] = useState('')
 
-	const onSubmit= () => {
+	const validUser = (e: React.FormEvent<HTMLFormElement>) => {
 		console.log({user, password})
 		if(user === 'admin' && password === 'admin'){
-			console.log('acesso liberado')
+			navigate('/user')
 			setUserName(user)
 		}
 		else{
+			e.preventDefault()
 			console.log('acesso negado')
 		}
 	}
@@ -31,13 +35,18 @@ export function Login() {
 		<Container>
 			<Title>Login</Title>
 			<div>
-				<form onSubmit={onSubmit}>
+				<form 
+				onSubmit={e =>{
+					validUser(e)
+				}}>
 					<InputBox>
 						<input
 							type='text'
 							name='user'
 							id='iuser'
-							onChange={(e) => setUser(e.target.value)}
+							onChange={(e) => {
+								setUser(e.target.value)
+							}}
 							required
 						/>
 						<label htmlFor='iuser'>Usuário:</label>
@@ -60,6 +69,7 @@ export function Login() {
 						type='submit'
 						height='40px'
 						hoverAnimation
+						
 					>
 						Entrar
 					</Button>
