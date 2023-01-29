@@ -1,7 +1,7 @@
 import { useState, useContext } from 'react';
 import { AppContext } from '../../App';
 
-import { Container, InputBox } from './styles';
+import { Container, InputBox, Popup } from './styles';
 import { Title } from '../../components/Title/styles';
 import { StorysetImage } from '../../components/StorysetImage';
 
@@ -18,16 +18,17 @@ export function Login() {
 
 	const [user, setUser] = useState('')
 	const [password, setPassword] = useState('')
+	const [popupState, setPopupState] = useState(true)
 
 	const validUser = (e: React.FormEvent<HTMLFormElement>) => {
 		console.log({user, password})
 		if(user === 'admin' && password === 'admin'){
-			navigate('/user')
 			setUserName(user)
+			navigate('/user')
 		}
 		else{
 			e.preventDefault()
-			console.log('acesso negado')
+			setPopupState(true)
 		}
 	}
 
@@ -80,8 +81,14 @@ export function Login() {
 					link='https://storyset.com/phone'
 				/>
 			</div>
+			<Popup open={popupState}>
+				<div>
+					<h1>Acesso negado</h1>
+					<button onClick={()=>{
+						setPopupState(false)
+					}}>Tentar novamente</button>
+				</div>
+			</Popup>
 		</Container>
 	);
 }
-
-// Finalizar estrutura da página de Login
