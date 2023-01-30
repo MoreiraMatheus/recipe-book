@@ -24,8 +24,8 @@ export const AppContext = createContext<AppContextProps>({
 });
 
 function App() {
-	const [userName, setUserName] = useState<string>('');
-	const savedRecipes = 0;
+	const [userName, setUserName] = useState<string>('fulano de tal');
+	const savedRecipes = 2;
 	const publishedRecipes = 0;
 
 	return (

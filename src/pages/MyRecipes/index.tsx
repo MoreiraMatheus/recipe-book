@@ -6,7 +6,7 @@ import { Title } from '../../components/Title/styles';
 import { RecipeCard } from '../../components/RecipeCard';
 
 export function MyRecipes() {
-	const { userName } = useContext(AppContext)
+	const { userName, savedRecipes, publishedRecipes } = useContext(AppContext)
 
 	return (
 		<Container>
@@ -79,8 +79,8 @@ export function MyRecipes() {
 				</div>
 				<div id='userDataTape'>
           <h1>{userName}</h1>
-          <p>Receitas salvas</p>
-					<p>receitas publicadas</p>
+          <p>Receitas salvas: {savedRecipes}</p>
+					<p>receitas publicadas: {publishedRecipes}</p>
 					<div id="triangle"></div>
         </div>
 			</section>

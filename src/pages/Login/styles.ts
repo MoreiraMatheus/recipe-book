@@ -108,16 +108,5 @@ export const Popup = styled.dialog`
     align-items: center;
     justify-content: center;
     row-gap: 16px;
-
-    button{
-      background-color: ${({theme})=>theme.COLORS.BACKGROUND.BUTTON};
-      color: ${({theme})=>theme.COLORS.TEXT.SECONDARYTEXT};
-      font-weight: 600;
-      font-size: 16px;
-      border: none;
-      border-radius: 16px;
-      padding: 8px;
-      cursor: pointer;
-    }
   }
 `

@@ -12,41 +12,41 @@ import { Button } from '../../components/Button/styles';
 import { useNavigate } from 'react-router-dom';
 
 export function Login() {
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 
-	const {setUserName} = useContext(AppContext)
+	const { setUserName } = useContext(AppContext);
 
-	const [user, setUser] = useState('')
-	const [password, setPassword] = useState('')
-	const [popupState, setPopupState] = useState(false)
+	const [user, setUser] = useState('');
+	const [password, setPassword] = useState('');
+	const [popupState, setPopupState] = useState(false);
 
 	const validUser = (e: React.FormEvent<HTMLFormElement>) => {
-		console.log({user, password})
-		if(user === 'admin' && password === 'admin'){
-			setUserName(user)
-			navigate('/recipes')
+		console.log({ user, password });
+		if (user === 'admin' && password === 'admin') {
+			setUserName(user);
+			navigate('/recipes');
+		} else {
+			e.preventDefault();
+			setPopupState(true);
 		}
-		else{
-			e.preventDefault()
-			setPopupState(true)
-		}
-	}
+	};
 
 	return (
 		<Container>
 			<Title>Login</Title>
 			<div>
-				<form 
-				onSubmit={e =>{
-					validUser(e)
-				}}>
+				<form
+					onSubmit={e => {
+						validUser(e);
+					}}
+				>
 					<InputBox>
 						<input
 							type='text'
 							name='user'
 							id='iuser'
-							onChange={(e) => {
-								setUser(e.target.value)
+							onChange={e => {
+								setUser(e.target.value);
 							}}
 							required
 						/>
@@ -59,7 +59,7 @@ export function Login() {
 							type='password'
 							name='password'
 							id='ipassword'
-							onChange={(e) => setPassword(e.target.value)}
+							onChange={e => setPassword(e.target.value)}
 							required
 						/>
 						<label htmlFor='ipassword'>Senha:</label>
@@ -70,7 +70,6 @@ export function Login() {
 						type='submit'
 						height='40px'
 						hoverAnimation
-						
 					>
 						Entrar
 					</Button>
@@ -84,9 +83,14 @@ export function Login() {
 			<Popup open={popupState}>
 				<div>
 					<h1>Login inválido</h1>
-					<button onClick={()=>{
-						setPopupState(false)
-					}}>Tentar novamente</button>
+					<Button
+						extraCSS='padding: 8px;'
+						onClick={() => {
+							setPopupState(false);
+						}}
+					>
+						Tentar novamente
+					</Button>
 				</div>
 			</Popup>
 		</Container>
