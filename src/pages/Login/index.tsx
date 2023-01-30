@@ -18,13 +18,13 @@ export function Login() {
 
 	const [user, setUser] = useState('')
 	const [password, setPassword] = useState('')
-	const [popupState, setPopupState] = useState(true)
+	const [popupState, setPopupState] = useState(false)
 
 	const validUser = (e: React.FormEvent<HTMLFormElement>) => {
 		console.log({user, password})
 		if(user === 'admin' && password === 'admin'){
 			setUserName(user)
-			navigate('/user')
+			navigate('/recipes')
 		}
 		else{
 			e.preventDefault()
@@ -83,7 +83,7 @@ export function Login() {
 			</div>
 			<Popup open={popupState}>
 				<div>
-					<h1>Acesso negado</h1>
+					<h1>Login inválido</h1>
 					<button onClick={()=>{
 						setPopupState(false)
 					}}>Tentar novamente</button>

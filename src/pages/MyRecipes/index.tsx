@@ -5,12 +5,12 @@ import { Container } from './styles';
 import { Title } from '../../components/Title/styles';
 import { RecipeCard } from '../../components/RecipeCard';
 
-export function UserPage() {
+export function MyRecipes() {
 	const { userName } = useContext(AppContext)
 
 	return (
 		<Container>
-			<Title>Página de user</Title>
+			<Title>Minhas receitas</Title>
 			<section>
 				<div id='recipes'>
 					<RecipeCard
