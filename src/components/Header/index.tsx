@@ -28,7 +28,7 @@ export function Header() {
 				<Link to={'/discovery'}>Descubra mais</Link>
 				<Link to={userName === '' ? '/login' : '/recipes'}>Minhas receitas</Link>
 			</nav>
-			<div onClick={()=>{navigate(userName === '' ? '/login' : '/recipes')}}>
+			<div onClick={()=>{navigate(userName === '' ? '/login' : '/user')}}>
 				<User
 					weight='bold'
 					color={theme.COLORS.OTHERS.USERICON}

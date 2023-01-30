@@ -4,6 +4,7 @@ import { Home } from '../pages/Home/Home';
 import { Discovery } from '../pages/Discovery/Discovery';
 import { Login } from '../pages/Login';
 import { MyRecipes } from '../pages/MyRecipes';
+import { UserPage } from '../pages/UserPage';
 import { ErrorPage } from '../pages/ErrorPage';
 
 export function MainRoutes(){
@@ -13,6 +14,7 @@ export function MainRoutes(){
     <Route path='/discovery' element={<Discovery/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/recipes' element={<MyRecipes/>}/>
+    <Route path='/user' element={<UserPage/>}/>
     <Route path='*' element={<ErrorPage/>}/>
   </Routes>
   )
