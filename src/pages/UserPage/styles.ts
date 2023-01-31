@@ -19,13 +19,31 @@ export const Container = styled.main`
     align-items: center;
     border-radius: 8px;
     background-color: ${({theme})=>theme.COLORS.BACKGROUND.FORM};
+
     div{
-      height: 50%;
+      height: 70%;
       width: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
       row-gap: 8px;
+      text-align: left;
+
+      img{
+        width: 100px;
+        height: 100px;
+        border: 1px solid ${({theme})=>theme.COLORS.BACKGROUND.BUTTON};
+        border-radius: 50%;
+      }
+
+      p{
+        width: 100%;
+      }
+    }
+
+    hr{
+      border: 1px dashed ${({theme})=>theme.COLORS.BACKGROUND.BUTTON};
+      width: 100%;
     }
   }
 `
