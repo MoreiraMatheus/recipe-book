@@ -11,9 +11,13 @@ import { GlobalStyle } from './styles/GlobalStyle';
 // dados que serão consultados globalmente
 interface AppContextProps {
 	userName: string;
-	setUserName: any;
+	setUserName: any; //adicionar tipagem aqui
 	savedRecipes: number;
 	publishedRecipes: number;
+	location?: string;
+	registrationDate?: string;
+	followers?: number;
+	following?: number;
 }
 
 export const AppContext = createContext<AppContextProps>({
@@ -25,14 +29,17 @@ export const AppContext = createContext<AppContextProps>({
 
 function App() {
 	const [userName, setUserName] = useState<string>('fulano de tal');
-	const savedRecipes = 2;
-	const publishedRecipes = 0;
 
 	return (
 		<ThemeProvider theme={lightTheme}>
 			<GlobalStyle />
 			<AppContext.Provider
-				value={{ userName, setUserName, savedRecipes, publishedRecipes }}
+				value={{ 
+					userName,
+					setUserName,
+					savedRecipes: 2,
+					publishedRecipes: 12,
+				}}
 			>
 				<Router>
 					<Header />

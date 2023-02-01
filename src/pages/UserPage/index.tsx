@@ -1,4 +1,4 @@
-import { Container } from './styles';
+import { Container, DataWrapper, ButtonWrapper } from './styles';
 
 import { Title } from '../../components/Title/styles';
 import { Button } from '../../components/Button/styles';
@@ -17,7 +17,7 @@ export function UserPage() {
 		<Container>
 			<Title>{userName}</Title>
 			<div>
-				<div>
+				<DataWrapper>
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Tuxgaucho.svg" alt="foto user" />
 					<p>Receitas salvas: {savedRecipes}</p>
 					<p>Receitas publicadas: {publishedRecipes}</p>
@@ -25,18 +25,32 @@ export function UserPage() {
 					<p>Por aqui desde:</p>
 					<p>Seguidores: </p>
 					<p>Seguindo: </p>
-				</div>
+				</DataWrapper>
 				<hr />
-				<Button
-					extraCSS='padding: 8px;'
-					width='80%'
-					onClick={() => {
-						setUserName('');
-            navigate('/login')
-					}}
-				>
-					sair
-				</Button>
+				<ButtonWrapper>
+					<Button
+						extraCSS='padding: 8px; margin: 0'
+						width='80%'
+					>
+						Alterar nome
+					</Button>
+					<Button
+						extraCSS='padding: 8px; margin: 0'
+						width='80%'
+					>
+						Alterar foto
+					</Button>
+					<Button
+						extraCSS='padding: 8px; margin: 0'
+						width='80%'
+						onClick={() => {
+							setUserName('');
+							navigate('/login')
+						}}
+					>
+						Sair
+					</Button>
+				</ButtonWrapper>
 			</div>
 		</Container>
 	);
