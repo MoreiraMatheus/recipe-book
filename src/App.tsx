@@ -39,6 +39,7 @@ function App() {
 					setUserName,
 					savedRecipes: 2,
 					publishedRecipes: 12,
+					location: 'São Paulo - SP'
 				}}
 			>
 				<Router>

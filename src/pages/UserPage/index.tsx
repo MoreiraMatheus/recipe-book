@@ -9,7 +9,7 @@ import { AppContext } from '../../App';
 import { useNavigate } from 'react-router-dom';
 
 export function UserPage() {
-	const { userName, savedRecipes, publishedRecipes, setUserName } =
+	const { userName, savedRecipes, publishedRecipes, setUserName, location } =
 		useContext(AppContext);
 
   const navigate = useNavigate()
@@ -21,14 +21,14 @@ export function UserPage() {
 					<img src="https://upload.wikimedia.org/wikipedia/commons/6/67/Tuxgaucho.svg" alt="foto user" />
 					<p>Receitas salvas: {savedRecipes}</p>
 					<p>Receitas publicadas: {publishedRecipes}</p>
-					<p>Local: </p>
-					<p>Por aqui desde:</p>
+					<p>Local: {location}</p>
+					{/* <p>Por aqui desde:</p>
 					<p>Seguidores: </p>
-					<p>Seguindo: </p>
+					<p>Seguindo: </p> */}
 				</DataWrapper>
 				<hr />
 				<ButtonWrapper>
-					<Button
+					{/* <Button
 						extraCSS='padding: 8px; margin: 0'
 						width='80%'
 					>
@@ -39,7 +39,7 @@ export function UserPage() {
 						width='80%'
 					>
 						Alterar foto
-					</Button>
+					</Button> */}
 					<Button
 						extraCSS='padding: 8px; margin: 0'
 						width='80%'
